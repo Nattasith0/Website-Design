@@ -91,8 +91,8 @@ nav ul li a {
     height: 100px;
     background: radial-gradient(circle, rgba(0, 255, 255, 0.5) 10%, transparent 70%);
     transform: translate(-50%, -50%);
-    border-radius: 50%;
-    transition: opacity 0.2s;
+    border-radius: 70%;
+    transition: opacity .8s;
     opacity: 0;
 }
 
@@ -102,4 +102,47 @@ nav ul li a {
 
 .menu-btn:hover {
     color: #00ffff;
+    text-shadow: 0 0 5px #00eeff;
+    box-shadow:
+        0 0 10px #00eeff,
+        0 0 20px #00eeff,
+        0 0 40px #00eeff,
+        0 0 80px #00eeff,
+        0 0 160px #00eeff;
+}
+
+img {
+    width: 200px;
+    height: 250px;
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: border-color 0.6s ease, transform 0.3s ease;
+    animation: borderColorChange 6s infinite ease-in-out;
+}
+
+.content {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 50px;
+}
+
+.box {
+    background-color: #1f1f3d;
+    padding: 20px;
+    border-radius: 10px;
+    width: 300px;
+}
+
+
+.section {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.section.visible {
+    opacity: 1;
+    transform: translateY(0);
 }

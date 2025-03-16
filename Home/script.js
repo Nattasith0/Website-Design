@@ -21,3 +21,21 @@ document.querySelectorAll(".menu-btn").forEach(button => {
     });
 });
 
+document.addEventListener("DOMContentLoaded", function () {
+    // จัดการปุ่มเมนูทุกอัน
+    document.querySelectorAll(".menu-btn").forEach(button => {
+        button.addEventListener("click", function (e) {
+            e.preventDefault(); // ป้องกันการโหลดหน้าใหม่
+
+            const targetId = this.getAttribute("href").substring(1); // เอา id จาก href เช่น "#menu" → "menu"
+            const targetSection = document.getElementById(targetId);
+
+            if (targetSection) {
+                window.scrollTo({
+                    top: targetSection.offsetTop - 50, // ให้เลื่อนลงมาพอดี (ปรับค่า -50 ตามความเหมาะสม)
+                    behavior: "smooth" // ทำให้เลื่อนอย่างนุ่มนวล
+                });
+            }
+        });
+    });
+});

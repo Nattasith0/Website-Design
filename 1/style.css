@@ -105,4 +105,24 @@
       font-size: 1rem;
     }
   }
+
+  .color-cycle {
+    font-weight: bold;
+    font-size: 3rem;
+    animation: colorChange 5s infinite linear;
+  }
+
+  @keyframes colorChange {
+    0% { color: #8bc34a; }     
+    25% { color: #00bcd4; }   
+    50% { color: #074bf8; }    
+    75% { color: #ff5722; }   
+    100% { color: #8bc34a; }   
+  }
+
+  .glow-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 15px rgba(94, 248, 255, 0.4);
+    cursor: pointer;
+  }
   

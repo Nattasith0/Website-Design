@@ -126,3 +126,29 @@
     cursor: pointer;
   }
   
+  .social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.icon {
+  width: 48px;
+  height: 48px;
+  border: 2px solid #ffcccc;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  font-size: 20px;
+}
+
+.icon:hover {
+  background-color: #ffcccc22;
+  box-shadow: 0 0 8px #ff9999;
+  transform: scale(1.1);
+}
